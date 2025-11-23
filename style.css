@@ -1,0 +1,557 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins",sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --theme-color:#009688;
+    --black-color:black;
+    --white-color:white;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+
+/* top bar */
+.top-bar {
+    background-color: var(--theme-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+}
+
+.right a {
+    color: var(--white-color);
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.right a i {
+    margin: 0 5px;
+}
+
+.left a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.left a i {
+    margin: 0 5px;
+}
+
+/* navbar */
+nav {
+    background-color: var(--black-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    height: 70px;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    color: var(--white-color);
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav-links ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links ul a {
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    text-decoration: none;
+    gap: 10px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.nav-links ul a:hover {
+    color: var(--theme-color);
+}
+
+/* hero section */
+.hero {
+    background: url(images/car.jpg);
+    width: 100%;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h1{
+    color: var(--white-color);
+    font-size: 40px;
+    font-family: 700;
+}
+
+.hero-content p {
+    color: var(--white-color);
+    margin: 20px 0;
+}
+
+.hero-content button {
+    margin: 0 40%;
+    padding: 12px 20px;
+    width: 20%;
+    border: none;
+    background-color: var(--theme-color);
+    color: var(--white-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-box {
+  width: 90%;
+  margin: 40px auto;
+  padding: 40px;
+  background: var(--white-color);
+  border-radius: 3px;
+  box-shadow: 0px 0px 2.5px lightgrey;
+}
+
+.row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid lightgrey;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background: var(--white-color);
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.btn-center {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.search-btn {
+  background: var(--theme-color);
+  color: white;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* service section */
+.service {
+    width: 90.5%;
+    margin: 50px auto;
+}
+
+.card-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards {
+    border: 1px solid lightgrey;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.cards b {
+    font-size: x-large;
+    font-weight: 100;
+    margin: 25px 0;
+}
+
+.cards i {
+    font-size: 75px;
+    margin: 25px 0;
+}
+
+.cards p {
+    margin: 25px 0;
+}
+
+.cards:hover {
+    background-color: var(--theme-color);
+    color: var(--white-color);
+}
+
+/* newcars section */
+.newestcars {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.toptittle {
+    text-align: center;
+}
+
+.toptittle h2{
+    font-size: 3rem;
+}
+
+.img-content {
+    display: flex;
+    align-items: center;
+}
+
+.img-content h2 {
+    font-size: 3rem
+}
+
+.img-content p {
+    margin: 20px 0;
+}
+
+.img-content button {
+    margin: 15px 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--white-color);
+    background-color: var(--theme-color);
+}
+
+/* featuredcars section */
+.featured-cars {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.featuredcars-rows{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 50px auto;
+}
+
+.featuredcars-cards{
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding: 80px;
+    min-height: 300px;
+    border-radius: 5px;
+}
+
+.featuredcars-cards img {
+    width: 95%;
+    height: auto;
+    object-fit: contain;
+    padding-bottom: 20px;
+}
+
+/* watch our client say (reviews) */
+.review {
+    width: 90%;
+    margin: 65px auto;
+}
+
+.review-card-rows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-cadrs {
+    border: 1px solid lightgrey;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6%;
+    text-align: center;
+    margin: 25px 10px;
+    border-radius: 5px;
+}
+
+.review-cadrs p {
+    margin: 20px auto;
+}
+
+.review-cadrs:hover {
+    background-color: var(--theme-color);
+    color: var(--white-color);
+}
+
+/* brands */
+.brands {
+    width: 90%;
+    margin: 65px auto;
+}
+
+.brands-rows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* fotter section */
+footer {
+    width: 100%;
+    background-color: var(--black-color);
+    padding: 55px;
+}
+
+.footer-rows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-contents {
+    color: var(--white-color);
+}
+
+.footer-contents h1 {
+    font-size: 35px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.footer-contents p{
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.footer-contents p:hover {
+    color: var(--theme-color);
+}
+
+.footer-contents input {
+    border: none;
+    box-shadow: 0 0 10px var(--white-color);
+    border-radius: 2.5px;
+    padding: 5px 10px;
+}
+
+/* bottom bar */
+.bottombar {
+    background-color: var(--theme-color);
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-bottom-bar{
+    color: var(--white-color);
+}
+
+.right-bottom-bar ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    color: var(--white-color);
+}
+
+
+
+
+
+/* HIDE TOP BAR ON SMALL SCREEN */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
+
+/* HAMBURGER MENU */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: black;
+    display: none;
+    padding: 20px 0;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: block;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+/* HERO RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .hero {
+    height: 65vh;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-content button {
+    margin: 10px auto;
+    width: 50%;
+  }
+}
+
+/* SEARCH BOX RESPONSIVE */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .search-box {
+    padding: 20px;
+  }
+}
+
+/* SERVICE CARDS */
+@media (max-width: 900px) {
+  .card-row {
+    flex-direction: column;
+  }
+
+  .cards {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* NEWEST CARS */
+@media (max-width: 900px) {
+  .img-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img-content img {
+    width: 95%;
+  }
+
+  .img-content h2 {
+    font-size: 28px;
+  }
+}
+
+/* FEATURED CARS */
+@media (max-width: 900px) {
+  .featuredcars-rows {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .featuredcars-rows {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* REVIEW CARDS */
+@media (max-width: 900px) {
+  .review-card-rows {
+    flex-direction: column;
+  }
+
+  .review-cadrs {
+    width: 100%;
+  }
+}
+
+/* BRANDS */
+@media (max-width: 768px) {
+  .brands-rows {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .brand-img img,
+  .barnd-img img {
+    width: 100px;
+  }
+}
+
+/* FOOTER */
+@media (max-width: 900px) {
+  .footer-rows {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}
+
+/* BOTTOM BAR */
+@media (max-width: 700px) {
+  .bottombar {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
